@@ -14,6 +14,7 @@ def appendtime(text):
     text += str(time.time())
     return(hashtext(text))
 
+#for block functionality
 def checkuser(name):
     try:
         name.balance
@@ -21,7 +22,7 @@ def checkuser(name):
     
     except NameError:
         return(False)
-
+    
 def checkbalance(name,amount):
     if(amount > name.balance):
         return(False)
@@ -41,6 +42,7 @@ class User:
     def withdraw(self, amount):
         self.balance -= amount
 
+#can create user, access users functions
 
 #do I want to do time appended hashes? sure, fuck it, with
 #personal keys?, when running, it updates...
